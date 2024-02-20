@@ -29,6 +29,26 @@ const weapons = [
   }
 ];
 
+//creating monsters
+const monsters = [
+  {
+    name: "slime",
+    level: 2,
+    health: 15
+  },
+  { 
+    name: "fanged beast",
+    level: 8,
+    health: 60
+  },
+  {
+    name: "dragon",
+    level: 20,
+    health: 300
+  
+  }
+];
+
 //organizing the texts and buttons display
 const locations = [
   {
@@ -91,10 +111,6 @@ function goCave(){
   update(locations[2]);
 }
 
-function fightDragon(){
-    console.log("Fighting dragon.");;
-  }
-
   function buyHealth() {
     if(gold >= 10){
       gold -= 10;
@@ -125,4 +141,18 @@ function fightDragon(){
       button2.onclick = sellWeapon;
   
     } 
+    
+    
+    function fightSlime(){
+
+    }x
+
+    function fightBeast(){
+
+    }
+
+    function fightDragon(){
+      console.log("Fighting dragon.");;
+    }
+
   } 
