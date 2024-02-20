@@ -68,20 +68,14 @@ const locations = [
     "button text": ["Fight slime", "Fight fanged beast", "Go to town square"],
     "button functions": [fightSlime, fightBeast, goTown],
     text: "You enter the cave. You see some monsters."
-  }
+  },
+  {
+    name: "fight",
+    "button text": ["Attack","Dodge","Run"],
+    "button functions": [attack,dodge,goTown],
+    text: "You are fighting a monster."
+  } 
 ];
-
-function sellWeapon() {
-  if (inventory.length > 1) {
-    gold += 15;
-    goldText.innerText = gold;
-    let currentWeapon = inventory.shift();
-    text.innerText = "You sold a " + currentWeapon + ".";
-    text.innerText += " In your inventory you have: " + inventory;
-  } else {
-    text.innerText = "Don't sell your only weapon!";
-  }
-}
 
 //initialize buttons.
 button1.onclick = goStore;
@@ -142,17 +136,41 @@ function goCave(){
   
     } 
     
-    
-    function fightSlime(){
-
-    }x
-
-    function fightBeast(){
-
-    }
-
-    function fightDragon(){
-      console.log("Fighting dragon.");;
-    }
 
   } 
+
+  function sellWeapon() {
+    if (inventory.length > 1) {
+      gold += 15;
+      goldText.innerText = gold;
+      let currentWeapon = inventory.shift();
+      text.innerText = "You sold a " + currentWeapon + ".";
+      text.innerText += " In your inventory you have: " + inventory;
+    } else {
+      text.innerText = "Don't sell your only weapon!";
+    }
+  }
+
+  function fightSlime(){
+
+  }x
+
+  function fightBeast(){
+
+  }
+
+  function fightDragon(){
+    console.log("Fighting dragon.");;
+  }
+
+  function goFight() {
+
+  }
+  
+  function attack() {
+  
+  }
+  
+  function dodge() {
+  
+  }
